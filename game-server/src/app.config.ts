@@ -14,7 +14,6 @@ export default config({
          * Define your room handlers:
          */
         gameServer.define('my_room', MyRoom);
-
     },
 
     initializeExpress: (app) => {
@@ -49,3 +48,5 @@ export default config({
          */
     }
 });
+
+module.exports = config

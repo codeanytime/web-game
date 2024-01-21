@@ -11,7 +11,14 @@
 import { listen } from "@colyseus/tools";
 
 // Import Colyseus config
-import app from "./app.config";
+import UserController from "./api/controllers/user-controller";
+import App from "./app";
 
+const port = process.env.PORT || 3000;
+// const config = require("app.config");
+
+const app = new App([new UserController()], 2567);
 // Create and listen on 2567 (or PORT environment variable.)
-listen(app);
+// listen(app);
+
+app.listen()
